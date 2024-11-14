@@ -1,0 +1,51 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net6.0-windows</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <UseWPF>true</UseWPF>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="JsonData\CandidateProfile.json" />
+    <None Remove="JsonData\HRAccount.json" />
+    <None Remove="JsonData\JobPosting.json" />
+    <None Remove="Resources\login.jpg" />
+    <None Remove="Resources\menu.jpg" />
+    <None Remove="Resources\register.jpg" />
+    <None Remove="XMLData\CandidateProfile.xml" />
+    <None Remove="XMLData\HRAccount.xml" />
+    <None Remove="XMLData\JobPosting.xml" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Candidate_Services\Candidate_Services.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="JsonData\CandidateProfile.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="JsonData\HRAccount.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="JsonData\JobPosting.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Resource Include="Resources\login.jpg" />
+    <Resource Include="Resources\menu.jpg" />
+    <Resource Include="Resources\register.jpg" />
+    <Content Include="XMLData\CandidateProfile.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="XMLData\HRAccount.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="XMLData\JobPosting.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+
+</Project>
